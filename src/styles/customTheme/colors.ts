@@ -5,7 +5,7 @@ export const config: ThemeConfig = {
   useSystemColorMode: true
 };
 
-/** extend additional color here */
+/** extend additional color here. You could refer to http://mkweb.bcgsc.ca/color-summarizer/?home */
 const extendedColors: DeepPartial<Record<string, Theme["colors"]["blackAlpha"]>> = {
   primary: {
     50: "#7E98C7",
@@ -23,8 +23,8 @@ const extendedColors: DeepPartial<Record<string, Theme["colors"]["blackAlpha"]>>
   }
 };
 
-/** override chakra colors here. You can refer to https://smart-swatch.netlify.app/ */
-const overridenChakraColors: DeepPartial<Theme["colors"]> = {
+/** override chakra colors here. You could also refer to https://smart-swatch.netlify.app/ */
+const overriddenChakraColors: DeepPartial<Theme["colors"]> = {
   blue: {
     50: "#e9f1ff",
     100: "#c8d5eb",
@@ -52,7 +52,7 @@ const overridenChakraColors: DeepPartial<Theme["colors"]> = {
 };
 
 const colors = {
-  ...overridenChakraColors,
+  ...overriddenChakraColors,
   ...extendedColors
 };
 
