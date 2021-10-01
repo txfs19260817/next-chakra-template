@@ -1758,10 +1758,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/lexend@^4.5.1":
+"@fontsource/montserrat@^4.5.1":
   version "4.5.1"
-  resolved "https://registry.npmmirror.com/@fontsource/lexend/download/@fontsource/lexend-4.5.1.tgz#905f5ed1f3f40e7150b79d6c11e7b4839977999e"
-  integrity sha1-kF9e0fP0DnFQt51sEee0g5l3mZ4=
+  resolved "https://registry.npmmirror.com/@fontsource/montserrat/download/@fontsource/montserrat-4.5.1.tgz#64a33ffdb77bbc63484c0321710bed272cc5b16f"
+  integrity sha1-ZKM//bd7vGNITAMhcQvtJyzFsW8=
 
 "@hapi/accept@5.0.2":
   version "5.0.2"

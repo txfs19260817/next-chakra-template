@@ -1,9 +1,11 @@
 /* eslint-disable react/jsx-props-no-spreading */
+import { ColorModeScript } from "@chakra-ui/react";
 import createEmotionServer from "@emotion/server/create-instance";
-import Document, { Html, Head, Main, NextScript, DocumentContext } from "next/document";
+import Document, { DocumentContext, Head, Html, Main, NextScript } from "next/document";
 import * as React from "react";
 
 import createEmotionCache from "styles/createEmotionCache";
+import theme from "styles/customTheme";
 
 const APP_NAME = "nextchakra-starter";
 const APP_DESCRIPTION = "Next.js app template with Chakra-UI, TypeScript, and PWA configured";
@@ -62,6 +64,7 @@ class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json" />
         </Head>
         <body>
+          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
           <NextScript />
         </body>
