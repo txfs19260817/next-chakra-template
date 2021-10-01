@@ -16,12 +16,7 @@ const SomeImage = () => {
         maxWidth={[240, 320]}
         marginX="auto"
       >
-        <Image
-          src="/Launching-amico.svg"
-          width={400}
-          height={400}
-          alt="Launching Illustration"
-        />
+        <Image src="/Launching-amico.svg" width={400} height={400} alt="Launching Illustration" />
       </MotionBox>
       <Text textAlign="center" fontSize="xs">
         <Link href="https://stories.freepik.com/web" isExternal>

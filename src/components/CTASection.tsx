@@ -20,10 +20,7 @@ const CTASection = () => {
           isExternal
           href="https://app.netlify.com/start/deploy?repository=https://github.com/sozonome/nextchakra-starter"
         >
-          <Image
-            src="https://www.netlify.com/img/deploy/button.svg"
-            alt="Netlify deploy button"
-          />
+          <Image src="https://www.netlify.com/img/deploy/button.svg" alt="Netlify deploy button" />
         </Link>
       </Flex>
 
@@ -43,13 +40,7 @@ const CTASection = () => {
       </Box>
 
       <Flex justifyContent="center" alignItems="center" gridGap={2}>
-        <Button
-          as="a"
-          href={repoLink}
-          target="_blank"
-          leftIcon={<AiFillGithub />}
-          size="sm"
-        >
+        <Button as="a" href={repoLink} target="_blank" leftIcon={<AiFillGithub />} size="sm">
           Open in Github
         </Button>
         <Link href={repoLink} isExternal>

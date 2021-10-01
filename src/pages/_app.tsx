@@ -19,11 +19,7 @@ interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
 }
 
-const MyApp = ({
-  Component,
-  pageProps,
-  emotionCache = clientSideEmotionCache,
-}: MyAppProps) => {
+const MyApp = ({ Component, pageProps, emotionCache = clientSideEmotionCache }: MyAppProps) => {
   return (
     <CacheProvider value={emotionCache}>
       <ChakraProvider theme={customTheme}>
@@ -43,7 +39,7 @@ const MyApp = ({
 };
 
 MyApp.defaultProps = {
-  emotionCache: clientSideEmotionCache,
+  emotionCache: clientSideEmotionCache
 };
 
 export default MyApp;
