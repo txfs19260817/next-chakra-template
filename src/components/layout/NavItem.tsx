@@ -4,8 +4,11 @@ import { ReactNode } from "react";
 import { IconType } from "react-icons";
 
 export type NavItemProps = {
+  // Nav item text
   children: ReactNode;
-  href?: string | undefined;
+  // Link href
+  href?: string;
+  // React Icon
   icon: IconType;
 };
 

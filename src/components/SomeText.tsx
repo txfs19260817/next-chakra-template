@@ -15,7 +15,7 @@ const SomeText = () => {
 
       <Box backgroundColor={colorMode === "light" ? "gray.200" : "gray.500"} padding={4} borderRadius={4}>
         <Box d="flex" alignItems="center" fontSize={textSize}>
-          This is a Next.js app with Chakra-UI and TypeScript setup.
+          This is a Next.js app with Chakra-UI, NextAuth.js and TypeScript setup.
         </Box>
       </Box>
     </>

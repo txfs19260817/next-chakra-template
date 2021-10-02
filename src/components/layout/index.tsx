@@ -1,5 +1,4 @@
 import {
-  Avatar,
   Box,
   Drawer,
   DrawerContent,
@@ -14,11 +13,12 @@ import {
 } from "@chakra-ui/react";
 import { ReactChild, ReactNode } from "react";
 import { FiMenu, FiSearch } from "react-icons/fi";
-import { MdHome, MdPages, MdSettings } from "react-icons/md";
+import { MdHome, MdSecurity, MdSettings } from "react-icons/md";
 
 import NavItem, { NavItemProps } from "./NavItem";
 import SidebarContent from "./SidebarContent";
 import ThemeToggle from "./ThemeToggle";
+import UserAvatar from "./UserAvatar";
 
 type LayoutProps = {
   children: ReactNode;
@@ -27,15 +27,17 @@ type LayoutProps = {
 const navItemPropsList: NavItemProps[] = [
   {
     icon: MdHome,
-    children: "Home"
+    children: "Home",
+    href: "/"
   },
   {
-    icon: MdPages,
-    children: "Pages"
+    icon: MdSecurity,
+    children: "Protected",
+    href: "/protected"
   },
   {
     icon: MdSettings,
-    children: "Settings"
+    children: "404"
   }
 ];
 
@@ -44,7 +46,7 @@ const Layout = ({ children }: LayoutProps) => {
   const NavItems = (): ReactChild[] => {
     return navItemPropsList.map((n, i) => (
       // eslint-disable-next-line react/no-array-index-key
-      <NavItem key={i} icon={n.icon}>
+      <NavItem key={i} icon={n.icon} href={n.href}>
         {n.children}
       </NavItem>
     ));
@@ -83,24 +85,17 @@ const Layout = ({ children }: LayoutProps) => {
             <InputLeftElement color="gray.500">
               <FiSearch />
             </InputLeftElement>
-            <Input placeholder="Search for articles..." />
+            <Input placeholder="Search for something..." />
           </InputGroup>
 
-          <Flex align="center">
+          <Flex align="center" gridGap={4}>
             <ThemeToggle />
-            <Avatar
-              ml="4"
-              size="sm"
-              name="avatar"
-              src="https://avatars.githubusercontent.com/u/30869823?v=4"
-              cursor="pointer"
-            />
+            <UserAvatar />
           </Flex>
         </Flex>
 
         <Box as="main" p="4">
-          {/* Add content here, remove div below  */}
-          {/* <Box borderWidth="4px" borderStyle="dashed" rounded="md" h="96" /> */}
+          {/* Main content here */}
           {children}
         </Box>
       </Box>

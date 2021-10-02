@@ -27,6 +27,7 @@ const SomeImage = () => {
       <Flex marginY={4} justifyContent="center" alignItems="center">
         <HelperImage src={`/nextjs-icon-${colorMode}.svg`} label="NextJS" />
         <HelperImage src="/chakra-ui-logomark-colored.svg" label="Chakra UI" />
+        <HelperImage src="/nextauthjs.png" label="NextAuth.js" />
         <HelperImage src="/ts-logo-512.svg" label="TypeScript" />
       </Flex>
     </>
